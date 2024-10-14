@@ -10,12 +10,12 @@ average_price = total_price/len(prices)
 print("Average Haircut Price: ", average_price)
 new_prices = []
 for price in prices:
-  price += 5
+  price -= 5
   new_prices.append(price)
 print(new_prices)
 total_revenue = 0
 for i in range(len(hairstyles)):
-  total_revenue += prices[i] + last_week[i]
+  total_revenue += prices[i] * last_week[i]
 print("Total Revenue: ",total_revenue)
 average_daily_price = total_revenue / 7
 print(average_daily_price)
